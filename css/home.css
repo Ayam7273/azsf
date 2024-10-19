@@ -277,6 +277,7 @@ section{
 
 /* Our Partners Ticker */
 .ticker {
+    margin-top: 80px;
     left: 0;
     right: 0;
     box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
