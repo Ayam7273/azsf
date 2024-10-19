@@ -144,7 +144,7 @@ section{
 
 /* Empowerment section styling */
 .section-two{
-    padding: 80px 243px;
+    padding: 20px 243px;
 }
 
 .empowerments-container {
@@ -412,7 +412,7 @@ section{
 
     /* Grid layout: Single column for cards */
     .empowerments-grid {
-        grid-template-columns: 1fr; 
+        /* grid-template-columns: 1fr;  */
         gap: 20px;
     }
 
@@ -445,7 +445,19 @@ section{
 }
 
 /* Mobile view: for screen widths up to 480px */
+@media (max-width: 600px) {
+    .empowerments-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+}
+
 @media (max-width: 480px) {
+    .empowerments-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
     .section-two {
         padding: 40px 16px;
     }
