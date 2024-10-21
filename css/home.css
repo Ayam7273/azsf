@@ -27,6 +27,7 @@ body {
     padding: 15px 200px;
     background-color: #fff;
     border-bottom: 1px solid #131313;
+    z-index: 999;
 }
 
 .nav,
@@ -278,10 +279,10 @@ section{
 /* Our Partners Ticker */
 .ticker {
     margin-top: 80px;
+    width: 100%;
     left: 0;
     right: 0;
-    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 
@@ -308,17 +309,105 @@ section{
 
 @keyframes scroll {
     0% {
-        transform: translateX(0); /* Start at normal position */
+        transform: translateX(0); 
     }
     100% {
-        transform: translateX(-100%); /* Scroll left by 100% of the content width */
+        transform: translateX(-100%);
     }
+}
+
+/* Knowledge styling */
+.section-three{
+    padding: 80px 243px;
+}
+
+.knowledge-container {
+    background-color: #EBEEF1;
+    border-radius: 20px;
+    padding: 43px;
+    max-width: 953px;
+    margin: 0 auto; 
+}
+
+/* Header and text section */
+.ktext-container {
+    display: flex;
+    align-items: start;
+    margin-bottom: 60px;
+    gap: 62px;
+}
+
+
+.left-content h1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.right-content p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    margin: 0;
+    color: #626060;
+    width: 418px;
+    text-align: left;
+}
+
+.download-link {
+    color: #07A550;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 24px;
+    /* display: inline-block; */
+    display: flex; 
+    align-items: center; 
+}
+
+/* Knowledge cards styling */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 217px;
+}
+
+.icon-circle {
+    font-size: 24px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.knowledge-text h3 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #131313;
+    margin: 0;
+}
+
+.knowledge-text p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    color: #626060;
+    margin: 8px 0 0;
 }
 
 
 
+/* -------------------------------------------- */
+/* --------------Responsive styling------------ */
+/* -------------------------------------------- */
 
-/* Responsive styling */
 
 /* 1. Navbar */
 @media screen and (max-width: 1160px) {
@@ -469,6 +558,7 @@ section{
     }
 }
 
+/* 3. Empowerment section */
 /* Tablet view: for screen widths up to 768px */
 @media (max-width: 1024px) {
     .section-two{
@@ -501,7 +591,6 @@ section{
 
     /* Grid layout: Single column for cards */
     .empowerments-grid {
-        /* grid-template-columns: 1fr;  */
         gap: 20px;
     }
 
@@ -587,5 +676,100 @@ section{
 
     .text-content p {
         font-size: 12px;
+    }
+}
+
+/* 4. Knowledge section */
+/* Tablet View*/
+@media (max-width: 1024px) {
+    .section-three {
+        padding: 60px 40px; 
+    }
+
+    .knowledge-container {
+        max-width: 100%; 
+        padding: 40px;
+    }
+
+    .ktext-container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .left-content h1{
+        text-align: center;
+    }
+
+    .right-content p {
+        width: 100%;
+        text-align: left;
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: column; 
+        gap: 30px;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        text-align: center;
+    }
+
+    .icon-circle {
+        margin: 0 auto 16px; 
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .section-three {
+        padding: 40px 20px;
+    }
+
+    .ktext-container {
+        gap: 30px;
+    }
+
+    .left-content h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .right-content p {
+        font-size: 14px;
+        text-align: center; 
+    }
+
+    .download-link {
+        text-align: center; 
+        /* display: block; */
+        margin: 16px auto 0;
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+    }
+
+    .cards-container {
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .knowledge-text h3 {
+        font-size: 18px; 
+    }
+
+    .knowledge-text p {
+        font-size: 14px;
+    }
+
+    .icon-circle {
+        margin-bottom: 16px;
     }
 }
