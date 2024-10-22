@@ -402,6 +402,97 @@ section{
     margin: 8px 0 0;
 }
 
+/* Impact */
+.impact-section {
+    padding: 20px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+  
+.impact-container {
+    max-width: 954px;
+    height: 542px;
+    margin: 0 auto;
+}
+  
+.impact-container h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+  
+.impact-container p {
+    font-size: 16px;
+    color: #626060;
+    margin-bottom: 40px;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Quote Section */
+.impact-quote {
+    background-image: url('/assets/impact-img.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    padding: 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+  
+.quote-content {
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+    line-height: 1.6;
+}
+  
+.quote-content p {
+    margin: 0;
+    font-weight: 800;
+    font-size: 30px;
+    color: #fff;
+}
+
+/* Stats */
+.impact-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 32px auto 0px;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+    padding: 10px 20px;
+}
+
+.stat h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 800;
+}
+  
+.stat p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    color: #fff;
+    font-family: "DM Sans", sans-serif;
+}
+
+.stat:not(:last-child) {
+    border-right: 2px solid #fff;
+}
+
+
+
 
 
 /* -------------------------------------------- */
@@ -771,5 +862,44 @@ section{
 
     .icon-circle {
         margin-bottom: 16px;
+    }
+}
+
+/* 5. Impact section */
+@media (max-width: 768px) {
+    .quote-content p {
+        font-size: 24px;
+    }
+
+    .impact-quote {
+      padding: 20px;
+    }
+  
+    .quote-content {
+      font-size: 18px;
+    }
+  
+    .impact-stats {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .stat h2 {
+      font-size: 26px;
+    }
+
+    .impact-stats {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .stat:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #fff;
+    }
+    
+    
+    .stat p {
+        font-size: 14px;
     }
 }
