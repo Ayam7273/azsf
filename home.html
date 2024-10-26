@@ -20,6 +20,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   
   <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 
   <!-- Linking SwiperJS CSS -->
@@ -27,6 +29,11 @@
   
 </head>
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+   
 
   <!-- Header section -->
   <nav class="nav">
@@ -36,16 +43,16 @@
     </a>
     
     <ul class="nav-links">
-      <li><a href="#">Calculator</a></li>
-      <li><a href="#">Nisab</a></li>
-      <li><a href="#">About AZSF</a></li>
-      <li><a href="#">News & Events</a></li>
-      <li><a href="#">Contact Us</a></li>
-      <li><a href="#" class="apply">Apply</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="nisab.html">Nisab</a></li>
+      <li><a href="about.html">About AZSF</a></li>
+      <li><a href="news.html">News & Events</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="https://forms.gle/3Pn3MW7oquxpQxEP9" class="apply">Apply</a></li>
       <i class="uil uil-times navCloseBtn"></i>
     </ul>
     
-    <a class="apply-btn" href="">
+    <a class="apply-btn" href="https://forms.gle/3Pn3MW7oquxpQxEP9">
       <button class="btn">Apply</button>
     </a>
    
@@ -124,7 +131,7 @@
         <div class="partners-button">
           <h4>Our Partners</h4>
           <span class="arrow">
-            <img src="assets/icons/chevron-right.svg" alt="">
+            <i class="bx bxs-chevron-right arrow"></i>
           </span> 
         </div>
     </div>
@@ -159,7 +166,7 @@
           <p>Our handy Zakat guides are free to download and give you all the info you need to start calculating your Zakat with confidence.</p>
           <a href="#" class="download-link">
             DOWNLOAD NOW 
-            <img src="/assets/icons/download.svg">
+            <i class="bx bxs-chevron-right arrow"></i>
           </a>
         </div>
       </div>
@@ -236,7 +243,7 @@
   
   
   <!-- News and Announcement Section -->
-  <section class="news-section">
+  <section class="section-five">
     <h2>Stay Informed, news and announcement</h2>
     <p>AZSF's Latest: Stay Informed with News, Announcements, and Updates.</p>
 
@@ -250,12 +257,14 @@
             <div class="blog-card">
               <div class="card-header">
                 <span class="status-indicator"></span>
-                <span class="read-time">5 min read</span>
+                <span class="read-time">5 min</span>
               </div>
               <h3>Lorem ipsum dolor sit amet consectetur. Ipsum congue mi vestibulum vulput.</h3>
               <p class="card-description">Lorem ipsum dolor sit amet consectetur. Ultrices egestas neque netus amet a porttitor.</p>
               <div class="card-footer">
-                <div class="arrow-button">&#8594;</div>
+                <div class="arrow-button">
+                  <i class="bx bxs-chevron-right arrow"></i>
+                </div>
               </div>
             </div>
           </li>
@@ -265,12 +274,14 @@
             <div class="blog-card">
               <div class="card-header">
                 <span class="status-indicator"></span>
-                <span class="read-time">5 min read</span>
+                <span class="read-time">5 min</span>
               </div>
               <h3>Lorem ipsum dolor sit amet consectetur. Ipsum congue mi vestibulum vulput.</h3>
               <p class="card-description">Lorem ipsum dolor sit amet consectetur. Ultrices egestas neque netus amet a porttitor.</p>
               <div class="card-footer">
-                <div class="arrow-button">&#8594;</div>
+                <div class="arrow-button">
+                  <i class="bx bxs-chevron-right arrow"></i>
+                </div>
               </div>
             </div>
           </li>
@@ -280,12 +291,14 @@
             <div class="blog-card">
               <div class="card-header">
                 <span class="status-indicator"></span>
-                <span class="read-time">5 min read</span>
+                <span class="read-time">5 min</span>
               </div>
               <h3>Lorem ipsum dolor sit amet consectetur. Ipsum congue mi vestibulum vulput.</h3>
               <p class="card-description">Lorem ipsum dolor sit amet consectetur. Ultrices egestas neque netus amet a porttitor.</p>
               <div class="card-footer">
-                <div class="arrow-button">&#8594;</div>
+                <div class="arrow-button">
+                  <i class="bx bxs-chevron-right arrow"></i>
+                </div>
               </div>
             </div>
           </li>
@@ -295,12 +308,14 @@
             <div class="blog-card">
               <div class="card-header">
                 <span class="status-indicator"></span>
-                <span class="read-time">5 min read</span>
+                <span class="read-time">5 min</span>
               </div>
               <h3>Lorem ipsum dolor sit amet consectetur. Ipsum congue mi vestibulum vulput.</h3>
               <p class="card-description">Lorem ipsum dolor sit amet consectetur. Ultrices egestas neque netus amet a porttitor.</p>
               <div class="card-footer">
-                <div class="arrow-button">&#8594;</div>
+                <div class="arrow-button">
+                  <i class="bx bxs-chevron-right arrow"></i>
+                </div>
               </div>
             </div>
           </li>
@@ -310,12 +325,14 @@
             <div class="blog-card">
               <div class="card-header">
                 <span class="status-indicator"></span>
-                <span class="read-time">5 min read</span>
+                <span class="read-time">5 min</span>
               </div>
               <h3>Lorem ipsum dolor sit amet consectetur. Ipsum congue mi vestibulum vulput.</h3>
               <p class="card-description">Lorem ipsum dolor sit amet consectetur. Ultrices egestas neque netus amet a porttitor.</p>
               <div class="card-footer">
-                <div class="arrow-button">&#8594;</div>
+                <div class="arrow-button">
+                  <i class="bx bxs-chevron-right arrow"></i>
+                </div>
               </div>
             </div>
           </li>
@@ -328,12 +345,199 @@
     
   </section>
 
-   
+  <!-- FAQ Section -->
+  <section class="section-six">
+    <div class="accordion">
+      <div class="accordion-right" >
+        <div class="title">Frequently asked questions</div>
+        <ul class="faq-text">
+          <li>
+            <div class="question-arrow">
+              <span class="question">How do I calculate my Zakat?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, doloribus.</p>
+            <span class="line"></span>
+          </li>
+          <li>
+            <div class="question-arrow">
+              <span class="question">Who runs AZSF?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive</p>
+            <span class="line"></span>
+          </li>
+          <li>
+            <div class="question-arrow">
+              <span class="question">can I use my credit card on AZSF website?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, necessitatibus.</p>
+            <span class="line"></span>
+          </li>
+          <li>
+            <div class="question-arrow">
+              <span class="question">Lorem ipsum dolor sit amet consectetur?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, labore.</p>
+            <span class="line"></span>
+          </li>
+          <li>
+            <div class="question-arrow">
+              <span class="question">Lorem ipsum dolor sit amet consectetur?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, repudiandae!</p>
+            <span class="line"></span>
+          </li>
+        </ul>
+      </div>
+      <div class="accordion-right">
+        <ul class="faq-text">
+          <li>
+            <div class="question-arrow">
+              <span class="question">Lorem ipsum dolor sit amet consectetur?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, doloribus.</p>
+            <span class="line"></span>
+          </li>
+          <li>
+            <div class="question-arrow">
+              <span class="question">Lorem ipsum dolor sit amet consectetur?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive</p>
+            <span class="line"></span>
+          </li>
+          <li>
+            <div class="question-arrow">
+              <span class="question">Lorem ipsum dolor sit amet consectetur?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, necessitatibus.</p>
+            <span class="line"></span>
+          </li>
+          <li>
+            <div class="question-arrow">
+              <span class="question">Lorem ipsum dolor sit amet consectetur?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, labore.</p>
+            <span class="line"></span>
+          </li>
+          <li>
+            <div class="question-arrow">
+              <span class="question">Lorem ipsum dolor sit amet consectetur?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, repudiandae!</p>
+            <span class="line"></span>
+          </li>
 
+          <li>
+            <div class="question-arrow">
+              <span class="question">Lorem ipsum dolor sit amet consectetur?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, repudiandae!</p>
+            <span class="line"></span>
+          </li>
 
-  <div style="width: 100%; height: 60px; border: 1px solid green;">
-    <h1>Hello world</h1>
-  </div>
+          <li>
+            <div class="question-arrow">
+              <span class="question">Lorem ipsum dolor sit amet consectetur?</span>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, repudiandae!</p>
+            <span class="line"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section-seven">
+    <div class="newsletter-bg">
+      <div class="newsletter-content">
+          <h2>How can we help you?</h2>
+          <p>Subscribe to our newsletter. We will update you on our latest project, news, and events.</p>
+          <form class="newsletter-form">
+              <input type="email" placeholder="Enter Your Email" required />
+              <button type="submit">Let's Talk</button>
+          </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="section-eight">
+    <div class="footer">
+      <div class="footer-row">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <h1>AZSF</h1>
+            <img src="/assets/icons/arrow-up.svg">
+          </div>
+          <div class="fund-reg">
+            <img src="/assets/fundraising-regulator.png" alt="">
+          </div>
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <p class="copy-right"><span>&copy;</span> AZSF 2024.</p>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="links">
+            <li><a href="#">Calculator</a></li>
+            <li><a href="#">About AZSF</a></li>
+            <li><a href="#">Nisab</a></li>
+            <li><a href="#">News & Event</a></li>
+            <li><a href="#">Apply</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="links">
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Cookie policy</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="links">
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="#">+44-020-555-0120</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="#">azsf@gmail.com</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <a href="#">
+                188 Camberwell Road,<br> 
+                London SE5 0ED
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  
   
   
   <!-- Linking SwiperJS script -->

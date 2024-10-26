@@ -17,8 +17,37 @@ body {
     width: 100%;
 }
 
+/* Preloader styles */
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+
+.spinner {
+    border: 8px solid #EBEEF1;
+    border-top: 8px solid #07A550; 
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 
+/* NavBar styling */
 .nav {
     position: fixed;
     top: 0;
@@ -42,7 +71,7 @@ a {
     color: #131313;
     text-decoration: none;
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .nav-links a:hover{
@@ -92,7 +121,7 @@ a {
 }
 
 section{
-    padding: 80px 0px;
+    /* padding: 80px 0px; */
 
 }
 
@@ -104,10 +133,11 @@ section{
     grid-auto-flow: column;
     align-items: center;
     margin: 0px 146px;
+    gap: 15px;
 }
 
 .hero-content{
-    /* width: 614px; */
+    width: 614px;
     /* border: 1px solid black; */
 }
 
@@ -258,17 +288,14 @@ section{
     height: 24px;
 }
 
-.arrow img{
-    height: 24px;
-}
 
 .partners-button:hover {
     background-color: #07A550; 
-    color: #131313; 
+    color: #fff; 
 }
 
 .partners-button .arrow {
-    margin-left: 10px;
+    margin-left: 2px;
     transition: margin-left 0.3s ease;
     color: #000;
 }
@@ -490,23 +517,25 @@ section{
 }
 
 /* News and Announcement */
-.news-section {
+.section-five {
     text-align: center;
     padding: 40px 20px;
 }
 
 
-.news-section h2 {
+.section-five h2 {
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-.news-section p {
+.section-five p {
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 40px;
     color: #626060;
+    font-family: "DM Sans", serif;
 }
 
 .swiper{
@@ -532,7 +561,6 @@ section{
     opacity: 1;
 }
   
-/* ----------------------- */
 .blog-card {
     background-color: #EBEEF1;
     border-radius: 16px;
@@ -562,29 +590,31 @@ section{
 .read-time {
     font-size: 14px;
     color: #626060;
+    font-family: "DM Sans", sans-serif;
+
 }
   
 .blog-card h3 {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
   
 .card-description {
     font-size: 14px;
     font-weight: 400;
     color: #626060;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-family: "DM Sans", serif;
 }
   
-/* Card Footer */
 .card-footer {
     display: flex;
     justify-content: flex-end;
 }
   
 .arrow-button {
-    /* background-color: #000; */
     color: #07A550;
     border: 2px solid #07A550;
     border-radius: 70px;
@@ -598,25 +628,285 @@ section{
     color: #fff;
 }
 
-@media (max-width: 768px) {
-    .news-section {
-        text-align: center;
-    }
-
-    .card-wrapper {
-      margin: 0 10px 25px;
-    }
-  
-    .card-wrapper .swiper-slide-button {
-      display: none;
-    }
-  
-    .card {
-      max-width: 100%;
-    }
+/* FAQ Section */
+.section-six{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh; */
+    padding: 20px;
 }
 
+::selection{
+    background: #07A550;
+    color: #fff;
+}
 
+.accordion{
+    display: flex;
+    max-width: 1010px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
+    /* padding: 45px 90px 45px 60px; */
+    gap: 20px;
+}
+
+.accordion-right{
+    background-color: #EBEEF1;
+    border-radius: 25px;
+    padding: 40px 42px;
+}
+  
+.accordion .accordion-right  {
+    width: 60%;
+}
+.accordion .accordion-right .title{
+    font-size: 35px;
+    font-weight: 600;
+    color: #181818;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.accordion .accordion-right .faq-text{
+    margin-top: 25px;
+    /* height: 263px; */
+    overflow-y: auto;
+}
+
+.faq-text::-webkit-scrollbar{
+    display: none;
+}
+
+.accordion .accordion-right li{
+    list-style: none;
+    cursor: pointer;
+}
+.accordion-right li .question-arrow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion-right li .question-arrow .question{
+    font-size: 18px;
+    font-weight: 500;
+    color: #595959;
+    transition: all 0.3s ease;
+    font-family: "Plus Jakarta Sans", sans-serif;
+
+}
+.aaccordion-right li .question-arrow .arrow{
+    font-size: 20px;
+    color: #595959;
+    transition: all 0.3s ease;
+}
+.accordion-right li.showAnswer .question-arrow .arrow{
+    transform: rotate(-180deg);
+}
+.accordion-right li:hover .question-arrow .question,
+.accordion-right li:hover .question-arrow .arrow{
+    color: #07A550;
+}
+.accordion-right li.showAnswer .question-arrow .question,
+.accordion-right li.showAnswer .question-arrow .arrow{
+    color: #07A550;
+}
+.accordion-right li .line{
+    display: block;
+    height: 2px;
+    width: 100%;
+    margin: 10px 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+.accordion-right li p{
+    width: 92%;
+    font-size: 15px;
+    font-family: "DM Sans", serif;
+    font-weight: 400;
+    color: #595959;
+    display: none;
+
+}
+.accordion-right li.showAnswer p{
+    display: block;
+}
+
+/* Newsletter Section */
+.section-seven{
+    padding: 80px 240px;
+}
+
+.newsletter-bg {
+    background-image: url('/assets/newsletter.png');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.newsletter-content {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+}
+
+.newsletter-content h2 {
+    font-size: 36px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.newsletter-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: "DM Sans", serif;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    width: 300px;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.newsletter-form button {
+    padding: 15px 25px;
+    background-color: #07A550;
+    color: white;
+    font-size: 16px;
+    font-family: "DM Sans", serif;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+.section-eight{
+    /* padding: 80px 240px; */
+}
+
+.footer {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1280px; */
+    /* width: 95%; */
+    background: #fff;
+    border-top: 1px solid #131313;
+}
+  
+.footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 60px 150px;
+}
+  
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+  
+.footer-logo h1{
+    font-size: 48px;
+    font-weight: 300px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #131313;
+}
+  
+.fund-reg{
+    width: 163px;
+    margin-top: 10px;
+}
+  
+.fund-reg img{
+    width: 100%;
+}
+  
+  
+.footer-row .footer-col h4 {
+    color: #131313;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  
+}
+  
+.footer-col .links {
+    margin-top: 20px;
+}
+  
+.footer-col .links li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+  
+.footer-col .links li a {
+    text-decoration: none;
+    color: #727272;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+  
+}
+  
+.footer-col .links li a:hover {
+    color: #07A550;
+    text-decoration: underline;
+}
+  
+.copy-right{
+    margin: 5px 0;
+    color: #727272;
+}
+  
+.copy-right span{
+    color: #07A550;
+}
+  
+  
+.footer-col .icons {
+    display: flex;
+    margin-top: 20px;
+    gap: 30px;
+    cursor: pointer;
+}
+  
+.footer-col .icons i {
+    color: #727272;
+}
+  
+.footer-col .icons i:hover  {
+    color: #07A550;
+}
+
+.footer-col .links i {
+    color: #727272;
+}
+  
+
+
+  
 
 
 /* -------------------------------------------- */
@@ -705,7 +995,7 @@ section{
 /* 2. Hero section */
 
 @media only screen and (max-width: 1194px) {
-    section {
+    .hero {
         padding: 60px 32px;
     }
 
@@ -898,7 +1188,7 @@ section{
 /* Tablet View*/
 @media (max-width: 1024px) {
     .section-three {
-        padding: 60px 40px; 
+        padding: 30px 40px; 
     }
 
     .knowledge-container {
@@ -993,7 +1283,7 @@ section{
 /* 5. Impact section */
 @media (max-width: 1024px) {
     .section-four {
-        padding: 60px 40px; 
+        padding: 30px 40px; 
     }
 }
 
@@ -1039,4 +1329,120 @@ section{
     }
 }
 
+/* 6. News & Blog section */
+@media (max-width: 768px) {
+    .section-five {
+        text-align: center;
+    }
 
+    .card-wrapper {
+      margin: 0 10px 25px;
+    }
+  
+    .card-wrapper .swiper-slide-button {
+      display: none;
+    }
+  
+    .card {
+      max-width: 100%;
+    }
+}
+
+/* 7. FAQ section */
+
+@media (max-width: 994px) {
+    
+    .accordion{
+      max-width: 100%;
+      /* padding: 45px 60px 45px 60px; */
+    }
+  
+    .accordion .accordion-right{
+      width: 63%;
+    }
+}
+
+@media (max-width: 999px) {
+    .accordion{
+      flex-direction: column;
+    }
+    
+    .accordion .accordion-right{
+      width: 100%;
+      margin-top: 30px;
+    }
+}
+
+@media (max-width: 538px) {
+
+    .accordion-text li p{
+      width: 98%;
+    }
+}
+  
+
+
+/* 8. Newsletter */
+@media (max-width: 1024px) {
+    .section-seven{
+        padding: 40px 120px;
+    }    
+}
+
+@media (max-width: 768px) {
+    .section-seven{
+        padding: 40px 60px;
+    }
+}
+
+@media (max-width: 500px) {
+    .section-seven{
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+    }
+}
+
+/* 9. Footer */
+@media (max-width: 768px) {
+    .footer {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      transform: none;
+      width: 100%;
+      border-radius: 0;
+    }
+  
+    .footer .footer-row {
+      padding: 20px;
+      gap: 1rem;
+    }
+  
+    .footer-col form {
+      display: block;
+    }
+  
+    .footer-col form :where(input, button) {
+      width: 100%;
+    }
+  
+    .footer-col form button {
+      margin: 10px 0 0 0;
+    }
+}
+
+@media (max-width: 1300px) {
+    .hero-content{
+        width: 100%;
+    }
+}
