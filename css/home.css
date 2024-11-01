@@ -110,9 +110,8 @@ a {
 }
 
 .btn:hover{
-    background-color: #EBEEF1;
-    color: #07A550;
-    border: 1px solid #07A550;
+    background: #131313;
+    color: #fff;
 }
   
 .nav .navOpenBtn,
@@ -172,7 +171,6 @@ section{
 .hero-img img{
     width: 100%;
     object-fit: cover;
-    /* border: 1px solid red; */
 }
 
 /* Empowerment section styling */
@@ -638,7 +636,7 @@ section{
 }
 
 ::selection{
-    background: #07A550;
+    /* background: #07A550; */
     color: #fff;
 }
 
@@ -796,7 +794,8 @@ section{
 }
 
 .newsletter-form button:hover {
-    background-color: #218838;
+    background: #131313;
+    color: #fff;
 }
 
 /* Footer */
@@ -930,7 +929,7 @@ section{
 
 @media screen and (max-width: 1025px) {
     .logo img {
-        width: 100px;
+        width: 125px;
     }
 
     .apply{

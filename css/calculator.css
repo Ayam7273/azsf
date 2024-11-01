@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+}
+
+.nav-active a{
+    color: #07A550;
+}
+
+/* section-one */
+.cal-sec1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 90px 0px 0px;
+}
+.cal-img {
+    height: auto;
+    width: 400px;
+    border-radius: 12px;
+}
+.cal-hero {
+    /* width: 1130px; */
+    max-width: 85%;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+.text {
+    width: 540px;
+}
+.text h2 {
+    color: #131313;
+    font-size: 46px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    
+}
+  
+.text p {
+    color: #626060;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    font-family: "DM Sans", serif;
+}
+.cal-cta {
+    margin-top: 30px;
+}
+.calculate {
+    font-family: "DM Sans", serif;
+    font-size: 16px;
+    background: #07A550;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.calculate:hover {
+    background: #131313;
+    color: #fff;
+}
+
+.cal-sec1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 90px 0px 0px;
+}
+.cal-img {
+    height: auto;
+    width: 400px;
+    border-radius: 12px;
+}
+.cal-hero {
+    /* width: 1130px; */
+    max-width: 85%;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+.text {
+    width: 540px;
+}
+.text h2 {
+    color: #131313;
+    font-size: 46px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    
+}
+  
+.text p {
+    color: #626060;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    font-family: "DM Sans", serif;
+}
+.cal-cta {
+    margin-top: 30px;
+}
+.calculate {
+    font-family: "DM Sans", serif;
+    font-size: 16px;
+    background: #07A550;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.calculate:hover {
+  background: #131313;
+  color: #fff;
+}
+
+
+/* section-two */
+.cal-sec2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0px 0px 0px;
+}
+.cal-steps-img {
+    height: auto;
+    width: 400px;
+    border-radius: 12px;
+}
+
+.cal-steps-intro {
+    max-width: 85%;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.cal-steps-intro .text {
+    width: 540px;
+}
+
+.cal-steps-intro .text h2 {
+    color: #131313;
+    font-size: 32px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    
+}
+  
+.cal-steps-intro .text p {
+    color: #626060;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    font-family: "DM Sans", serif;
+}
+
+/* -----------------------------------
+---------Responsive view-----------
+----------------------------------- */
+
+/* section-one */
+/* Tablet View */
+@media (max-width: 1024px) {
+    .cal-hero {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cal-img {
+      /* width: 300px; */
+      width: 70%;
+      margin-bottom: 20px;
+    }
+  
+    .text {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    /* .text h2 {
+      font-size: 60px;
+    } */
+  
+    .text h5 {
+      font-size: 20px;
+    }
+  
+    .text p {
+      font-size: 16px;
+    }
+}
+  
+/* Mobile View */
+@media (max-width: 768px) {
+    .cal-sec1 {
+      padding: 50px 0 0;
+    }
+  
+    .cal-hero {
+      width: 90%;
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .cal-img {
+      /* width: 250px; */
+      width: 70%;
+      margin-bottom: 20px;
+    }
+  
+    /* .text h2 {
+      font-size: 40px;
+    } */
+  
+    .text h5 {
+      font-size: 18px;
+    }
+  
+    .text p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  
+    .calculate {
+      font-size: 16px;
+    }
+}
+
+/* section-two */
+/* Tablet View */
+@media (max-width: 1024px) {
+    .cal-steps-intro {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cal-steps-img {
+      /* width: 300px; */
+      width: 70%;
+      margin-bottom: 20px;
+    }
+  
+    .cal-steps-intro .text {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    /* .cal-steps-intro .text h2 {
+      font-size: 60px;
+    } */
+  
+    .cal-steps-intro .text h5 {
+      font-size: 20px;
+    }
+  
+    .cal-steps-intro .text p {
+      font-size: 16px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .cal-sec2 {
+      padding: 0px 0px 50px;
+    }
+  
+    .cal-steps-intro {
+      width: 90%;
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .cal-steps-img {
+      /* width: 250px; */
+      width: 70%;
+      margin-bottom: 20px;
+    }
+  
+    /* .cal-steps-intro .text h2 {
+      font-size: 40px;
+    } */
+  
+    .cal-steps-intro .text h5 {
+      font-size: 18px;
+    }
+  
+    .cal-steps-intro .text p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+}
