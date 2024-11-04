@@ -102,19 +102,68 @@ a {
 }
 
 
-
-/* Footer */
-.section-eight{
-    /* padding: 80px 240px; */
+/* Newsletter*/
+.section-four{
+    padding: 80px 240px;
+}
+  
+.newsletter-bg {
+    background-color: #EBEEF1;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+  
+.newsletter-content {
+    text-align: center;
+    color: #131313;
+    max-width: 800px;
+}
+  
+.newsletter-content h2 {
+    font-size: 36px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+  
+.newsletter-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: "DM Sans", serif;
+}
+  
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+  
+.newsletter-form div {
+    padding: 15px 25px;
+    background-color: #07A550;
+    color: white;
+    font-size: 16px;
+    font-family: "DM Sans", serif;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+  
+.newsletter-form div:hover {
+    background: #131313;
+    color: #fff;
 }
 
+
+
+/* Footer */
 .footer {
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 1280px; */
-    /* width: 95%; */
     background: #fff;
     border-top: 1px solid #131313;
 }
@@ -215,7 +264,7 @@ a {
 /* -------------------------------------------- */
 
 
-/* 1. Navbar */
+/* Navbar */
 @media screen and (max-width: 1232px) {
     .nav {
       padding: 15px 100px;
@@ -241,7 +290,6 @@ a {
     .apply-btn{
         display: none;
     }
-
 
     .nav .navOpenBtn,
     .nav .navCloseBtn {
@@ -294,7 +342,38 @@ a {
 }
 
 
-/* 9. Footer */
+/* ----------Newsletter--------- */
+@media (max-width: 1024px) {
+    .section-four{
+        padding: 40px 120px;
+    }    
+}
+  
+@media (max-width: 768px) {
+    .section-four{
+        padding: 40px 60px;
+    }
+}
+  
+@media (max-width: 500px) {
+    .section-four{
+        padding: 40px 20px;
+    }
+}
+  
+@media (max-width: 768px) {
+  
+    .newsletter-form {
+        flex-direction: column;
+    }
+  
+    .newsletter-form input {
+        width: 100%;
+    }
+}
+  
+
+/* Footer */
 @media (max-width: 768px) {
     .footer {
       position: relative;

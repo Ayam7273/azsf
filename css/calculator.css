@@ -74,65 +74,6 @@ body {
   color: #fff;
 }
 
-.cal-sec1 {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 90px 0px 0px;
-}
-.cal-img {
-  height: auto;
-  width: 400px;
-  border-radius: 12px;
-}
-.cal-hero {
-  /* width: 1130px; */
-  max-width: 85%;
-  margin: 40px auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 20px;
-}
-.text {
-  width: 540px;
-}
-.text h2 {
-  color: #131313;
-  font-size: 46px;
-  font-weight: 600;
-  font-family: "Plus Jakarta Sans", sans-serif;
-    
-}
-  
-.text p {
-  color: #626060;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 1px;
-  margin-top: 15px;
-  font-family: "DM Sans", serif;
-}
-.cal-cta {
-  margin-top: 30px;
-}
-.calculate {
-  font-family: "DM Sans", serif;
-  font-size: 16px;
-  background: #07A550;
-  color: #fff;
-  text-decoration: none;
-  border: none;
-  padding: 13px 30px;
-  border-radius: 50px;
-  transition: 0.5s;
-}
-.calculate:hover {
-  background: #131313;
-  color: #fff;
-}
-
-
 /* section-two */
 .cal-sec2 {
   display: flex;
@@ -231,70 +172,11 @@ body {
 
 }
 
-/* Section Four */
-.section-four{
-  padding: 80px 240px;
-}
-
-.newsletter-bg {
-  background-color: #EBEEF1;
-  background-size: cover;
-  background-position: center;
-  padding: 80px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-}
-
-.newsletter-content {
-  text-align: center;
-  color: #131313;
-  max-width: 800px;
-}
-
-.newsletter-content h2 {
-  font-size: 36px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.newsletter-content p {
-  font-size: 16px;
-  margin-bottom: 20px;
-  font-family: "DM Sans", serif;
-}
-
-.newsletter-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.newsletter-form div {
-  padding: 15px 25px;
-  background-color: #07A550;
-  color: white;
-  font-size: 16px;
-  font-family: "DM Sans", serif;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-.newsletter-form div:hover {
-  background: #131313;
-  color: #fff;
-}
-
-
 /* -----------------------------------
 ---------Responsive view-----------
 ----------------------------------- */
 
-/* section-one */
+/* ----------section-one--------- */
 /* Tablet View */
 @media (max-width: 1024px) {
   .cal-hero {
@@ -363,7 +245,7 @@ body {
   }
 }
 
-/* section-two */
+/* ----------section-two--------- */
 /* Tablet View */
 @media (max-width: 1024px) {
   .cal-steps-intro {
@@ -425,35 +307,5 @@ body {
   .cal-steps-intro .text p {
     font-size: 14px;
     line-height: 22px;
-  }
-}
-
-/* section-four */
-@media (max-width: 1024px) {
-  .section-four{
-      padding: 40px 120px;
-  }    
-}
-
-@media (max-width: 768px) {
-  .section-four{
-      padding: 40px 60px;
-  }
-}
-
-@media (max-width: 500px) {
-  .section-four{
-      padding: 40px 20px;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .newsletter-form {
-      flex-direction: column;
-  }
-
-  .newsletter-form input {
-      width: 100%;
   }
 }
