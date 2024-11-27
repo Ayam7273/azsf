@@ -17,3 +17,23 @@ navOpenBtn.addEventListener("click", () => {
 navCloseBtn.addEventListener("click", () => {
     nav.classList.remove("openNav");
 });
+
+// 2. NavBar Drop down
+document.addEventListener("DOMContentLoaded", () => {
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+    const dropdownLink = dropdown.querySelector("a");
+  
+    // Toggle dropdown visibility on click
+    dropdownLink.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent default link behavior
+        dropdownMenu.classList.toggle("show");
+    });
+  
+    // Close dropdown if clicking outside
+    document.addEventListener("click", (e) => {
+        if (!dropdown.contains(e.target)) {
+            dropdownMenu.classList.remove("show");
+        }
+    });
+  });
