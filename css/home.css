@@ -119,9 +119,51 @@ a {
     display: none;
 }
 
-section{
-    /* padding: 80px 0px; */
+/* Dropdown Styling */
+.nav .dropdown {
+    position: relative;
+}
 
+.nav .dropdown a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    background-color: #EBEEF1;
+    border-radius: 8px;
+    padding: 10px 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.nav .dropdown-menu li {
+    list-style: none;
+}
+
+.nav .dropdown-menu a {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #131313;
+    white-space: nowrap;
+}
+
+.nav .dropdown-menu a:hover {
+    background-color: #fff;
+    color: #131313;
+    text-decoration: none;
+}
+
+/* Show Dropdown */
+.nav .dropdown:hover .dropdown-menu {
+    display: flex;
 }
 
 /* Hero styling */
@@ -799,17 +841,7 @@ section{
 }
 
 /* Footer */
-.section-eight{
-    /* padding: 80px 240px; */
-}
-
 .footer {
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 1280px; */
-    /* width: 95%; */
     background: #fff;
     border-top: 1px solid #131313;
 }
