@@ -95,6 +95,11 @@ a {
     display: none;
 }
 
+.cta{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
 
 .btn {
     width: 156px;
@@ -113,7 +118,26 @@ a {
     background: #131313;
     color: #fff;
 }
-  
+
+.give-btn{
+    width: 156px;
+    height: 48px;
+    padding: 13px 16px;
+    background-color: #fff;
+    border: 2px solid #07A550;
+    border-radius: 50px;
+    color: #07A550;
+    font-size: 16px;
+    font-weight: bold;  
+    cursor: pointer;
+}
+
+.give-btn:hover{
+    background: #131313;
+    color: #fff;
+    border: none;
+}
+ 
 .nav .navOpenBtn,
 .nav .navCloseBtn {
     display: none;
@@ -156,9 +180,8 @@ a {
 }
 
 .nav .dropdown-menu a:hover {
-    background-color: #fff;
-    color: #131313;
-    text-decoration: none;
+    color: #07A550;
+    text-decoration: underline;
 }
 
 /* Show Dropdown */
@@ -1091,6 +1114,10 @@ a {
         height: 100%;
         width: 100%;
         text-align: center;
+    }
+
+    .cta{
+        flex-direction: column;
     }
 }
 

@@ -85,6 +85,7 @@ h2 {
 .text p {
     font-size: 14px;
     color: #7f8c8d;
+    font-family: "DM Sans", serif;
 }
 
 .image img {
@@ -168,6 +169,7 @@ h2 {
     color: #7f8c8d;
     line-height: 1.8;
     margin-bottom: 30px;
+    font-family: "DM Sans", serif;
 }
   
 .right {
@@ -214,6 +216,7 @@ h2 {
 .mission p {
     font-size: 14px;
     color: #7f8c8d;
+    font-family: "DM Sans", serif;
 }
 
 /* Section-Three */
@@ -233,6 +236,11 @@ h2 {
   
 .impact-left {
     flex: 0.8;
+}
+
+.impact-left p{
+    color: #7f8c8d;
+    font-family: "DM Sans", serif;
 }
   
 .impact-left h2 {

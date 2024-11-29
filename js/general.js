@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Toggle dropdown visibility on click
     dropdownLink.addEventListener("click", (e) => {
-        e.preventDefault(); // Prevent default link behavior
         dropdownMenu.classList.toggle("show");
     });
   

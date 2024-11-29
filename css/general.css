@@ -138,9 +138,8 @@ a {
 }
 
 .nav .dropdown-menu a:hover {
-    background-color: #fff;
-    color: #131313;
-    text-decoration: none;
+    color: #07A550;
+    text-decoration: underline;
 }
 
 /* Show Dropdown */
