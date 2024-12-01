@@ -249,6 +249,11 @@ body {
     .card-content a i {
         font-size: 25px;
     }
+
+    .popup-close {
+        position: fixed;
+        margin-bottom: 10px;
+    }
 }
 
 /* Mobile view */
@@ -272,5 +277,6 @@ body {
 
     .popup-close {
         position: fixed;
+        margin-bottom: 10px;
     }
 }
