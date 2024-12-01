@@ -69,7 +69,7 @@ document.querySelectorAll('.card').forEach((card) => {
             
         };
   
-        // Populate the pop-up with specific content
+        // Pop-up with specific content
         const popupContent = cardContent[dataId];
         document.getElementById('popup-image').src = popupContent.image;
         document.getElementById('popup-title').textContent = popupContent.title;
