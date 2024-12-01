@@ -49,6 +49,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 20px;
     padding: 20px 80px;
+    margin-bottom: 30px;
 }
   
 .card {
