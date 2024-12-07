@@ -8,12 +8,14 @@ let currentStep = 0;
 
 nextButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    steps[currentStep].classList.remove("active");
-    progressSteps[currentStep].classList.remove("active");
-    currentStep++;
-    steps[currentStep].classList.add("active");
-    progressSteps[currentStep].classList.add("active");
-    updateProgress();
+    if (validateStep()) { // Only proceed if validation passes
+      steps[currentStep].classList.remove("active");
+      progressSteps[currentStep].classList.remove("active");
+      currentStep++;
+      steps[currentStep].classList.add("active");
+      progressSteps[currentStep].classList.add("active");
+      updateProgress();
+    }
   });
 });
 
@@ -34,4 +36,15 @@ function updateProgress() {
   progressSteps.forEach((step, index) => {
     step.classList.toggle("completed", index <= currentStep);
   });
+}
+
+function validateStep() {
+  const inputs = steps[currentStep].querySelectorAll("input[required]");
+  for (let input of inputs) {
+    if (!input.checkValidity()) {
+      input.reportValidity();
+      return false;
+    }
+  }
+  return true;
 }

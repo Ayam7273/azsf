@@ -3,16 +3,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
-:root {
-  --hue: 223;
-  --hue-error: 3;
-  --bg: #e8e3e3;
-  --fg: #1c1717;
-  --primary: #f20d0d;
-  --trans-dur: 0.3s;
-  font-size: calc(12px + (30 - 14) * (100vw - 280px) / (3840 - 280));
-}
+
 a {
   color: var(--primary);
   transition: color var(--trans-dur);
@@ -29,8 +22,9 @@ button {
   font: 0.6666666667em "Nunito Sans", sans-serif;
 }
 body {
+
   background-color: var(--bg);
-  display: flex;
+  /* display: flex; */
   height: 100vh;
   transition: background-color var(--trans-dur), color var(--trans-dur);
 }
@@ -185,7 +179,12 @@ p {
 }
 
 .login__cta-text p {
-  color: #131313;
+  color: #07A550;
+  background-color: #EBEEF1;
+  font-weight: bold;
+  font-family: "DM Sans", serif;
+  padding: 10px 20px;
+  border-radius: 50px;
 }
 .login__form {
   background-color: #fff;
@@ -226,7 +225,7 @@ p {
     padding-inline: 4.5em 9em;
     position: absolute;
     right: calc(50% - 0.75em);
-    width: 30em;
+    width: 35em;
   }
   [dir="rtl"] .login__cta-text {
     right: auto;

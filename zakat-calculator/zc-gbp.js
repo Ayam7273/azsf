@@ -9,7 +9,7 @@ let getvalue = (id) => {
   
   
   let calculate = () => {
-    let amt_nisab = 5301;
+    let amt_nisab = 430.70;
     let amt_home = getvalue("amount_home");
     let amt_bank = getvalue("amount_bank");
     let amt_shares = getvalue("amount_shares");
@@ -59,41 +59,5 @@ let getvalue = (id) => {
     }
   };
   
-  
-  (function (f, u, n, r, a, i, s, e) {
-    let data = {
-      window: window,
-      document: document,
-      tag: "script",
-      data: "funraise",
-      orgId: f,
-      uri: u,
-      common: n,
-      client: r,
-      script: a,
-    };
-    let scripts;
-    let funraiseScript;
-    data.window[data.data] = data.window[data.data] || [];
-    if (
-      data.window[data.data].scriptIsLoading ||
-      data.window[data.data].scriptIsLoaded
-    )
-      return;
-    data.window[data.data].loading = true;
-    data.window[data.data].push("init", data);
-    scripts = data.document.getElementsByTagName(data.tag)[0];
-    funraiseScript = data.document.createElement(data.tag);
-    funraiseScript.async = true;
-    funraiseScript.src =
-      data.uri + data.common + data.script + "?orgId=" + data.orgId;
-    scripts.parentNode.insertBefore(funraiseScript, scripts);
-  })(
-    "1e78fec4-8fd0-4a3e-b82b-866c29012531",
-    "https://assets-dev.funraise.io",
-    "/widget/common/2.0",
-    "/widget/client",
-    "/inject-form.js"
-  );
   
   window.funraise.push("create", { form: 2426 });

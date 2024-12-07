@@ -135,7 +135,6 @@
           <h2>Still have doubts? Let's address them</h2>
           <p>Do you require additional information, clarification or is there anything else you would like to inquire about?</p>
           <form class="newsletter-form">
-              <!-- <input type="email" placeholder="Enter Your Email" required /> -->
               <a href="/contact.html">
                 <div>Contact Us</div>
               </a>
@@ -145,70 +144,119 @@
   </section>
 
   <!-- Footer -->
-    <section class="section-eight">
-      <div class="footer">
-        <div class="footer-row">
-          <div class="footer-col">
-            <div class="footer-logo">
-              <h1>AZSF</h1>
-              <img src="/assets/icons/arrow-up.svg">
-            </div>
-            <div class="fund-reg">
-              <img src="/assets/fundraising-regulator.png" alt="">
-            </div>
-            <div class="icons">
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-twitter"></i>
-              <i class="fa-brands fa-instagram"></i>
-            </div>
-            <p class="copy-right"><span>&copy;</span> AZSF 2024.</p>
+  <section class="section-eight">
+    <div class="footer">
+      <div class="footer-row">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <h1>AZSF</h1>
+            <img src="/assets/icons/arrow-up.svg">
           </div>
-    
-          <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul class="links">
-              <li><a href="#">Calculator</a></li>
-              <li><a href="#">About AZSF</a></li>
-              <li><a href="#">Nisab</a></li>
-              <li><a href="#">News & Event</a></li>
-              <li><a href="#">Apply</a></li>
-            </ul>
+          <div class="fund-reg">
+            <img src="/assets/fundraising-regulator.png" alt="">
           </div>
-          
-          <div class="footer-col">
-            <h4>Legal</h4>
-            <ul class="links">
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Privacy policy</a></li>
-              <li><a href="#">Cookie policy</a></li>
-            </ul>
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
           </div>
-    
-          <div class="footer-col">
-            <h4>Contact</h4>
-            <ul class="links">
-              <li>
-                <i class="fa-solid fa-phone"></i>
-                <a href="#">+44-020-555-0120</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-envelope"></i>
-                <a href="#">azsf@gmail.com</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-location-dot"></i>
-                <a href="#">
-                  188 Camberwell Road,<br> 
-                  London SE5 0ED
-                </a>
-              </li>
-            </ul>
-          </div>
+          <p class="copy-right"><span>&copy;</span> AZSF 2024.</p>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="links">
+            <li><a href="#">Calculator</a></li>
+            <li><a href="#">About AZSF</a></li>
+            <li><a href="#">Nisab</a></li>
+            <li><a href="#">News & Event</a></li>
+            <li><a href="#">Apply</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="links">
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Cookie policy</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="links">
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="#">+44-020-555-0120</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="#">azsf@gmail.com</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <a href="#">
+                188 Camberwell Road,<br> 
+                London SE5 0ED
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
+    </div>
 
-    </section>
-    
+  </section>
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <button id="closePopup" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+    <div class="popup-header">
+      <h2>What currency do you want to calculate your Zakat?</h2>
+    </div>
+    <div class="popup-content">
+      <a href="zakat-calculator/zc-usd.html">
+        <div class="card"><img src="assets/usd.svg"><span>USD</span></div>
+      </a>
+      <a href="zakat-calculator/zc-gbp.html">
+        <div class="card"><img src="assets/gbp.svg"><span>GBP</span></div>
+      </a>
+      <a href="zakat-calculator/zc-ngn.html">
+        <div class="card"><img src="assets/ngn.svg"><span>NGN</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay"></div>
+
+  <script>
+    // Get elements
+    const calculateBtn = document.querySelector('.calculate');
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
+    const closePopup = document.getElementById('closePopup');
+
+    // Show popup
+    calculateBtn.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default link behavior
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+    });
+
+    // Hide popup
+    closePopup.addEventListener('click', () => {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', () => {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+
+  </script>
+
   <script src="js/general.js"></script>
 </body>
 </html>
