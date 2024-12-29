@@ -82,10 +82,8 @@
         he is All-Seeing." (Quran, 2:110).
       </p>
       <div class="cta">
-        <a href="">
-          <button class="btn">Pay Zakat</button>
-        </a>
-        <a href="">
+        <button class="btn">Pay Zakat</button>
+        <a href="donate.html">
           <button class="give-btn">Give Sadaqah</button>
         </a>
       </div>
@@ -185,7 +183,7 @@
       </div>
   
       <div class="cards-container">
-        <div class="card">
+        <div class="cards">
           <div class="icon-circle">
             <img src="/assets/icons/arrow-down.svg">
           </div>
@@ -195,7 +193,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="cards">
           <div class="icon-circle">
             <img src="/assets/icons/arrow-down.svg">
           </div>
@@ -205,7 +203,7 @@
           </div>
         </div>
   
-        <div class="card">
+        <div class="cards">
           <div class="icon-circle">
             <img src="/assets/icons/arrow-down.svg">
           </div>
@@ -479,7 +477,7 @@
           <p>Subscribe to our newsletter. We will update you on our latest project, news, and events.</p>
           <form class="newsletter-form">
               <input type="email" placeholder="Enter Your Email" required />
-              <button type="submit">Let's Talk</button>
+              <button type="submit">Subscribe</button>
           </form>
       </div>
     </div>
@@ -508,20 +506,20 @@
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul class="links">
-            <li><a href="#">Calculator</a></li>
-            <li><a href="#">About AZSF</a></li>
-            <li><a href="#">Nisab</a></li>
-            <li><a href="#">News & Event</a></li>
-            <li><a href="#">Apply</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="about.html">About AZSF</a></li>
+            <li><a href="nisab.html">Nisab</a></li>
+            <li><a href="news.html">News & Event</a></li>
+            <li><a href="apply.html">Apply</a></li>
           </ul>
         </div>
         
         <div class="footer-col">
           <h4>Legal</h4>
           <ul class="links">
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">Cookie policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
+            <li><a href="cookie.html">Cookie policy</a></li>
           </ul>
         </div>
   
@@ -548,6 +546,55 @@
       </div>
     </div>
   </section>
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <button id="closePopup" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+    <div class="popup-header">
+      <h2>What currency do you want to calculate your Zakat?</h2>
+    </div>
+    <div class="popup-content">
+      <a href="zakat-calculator/zc-usd.html">
+        <div class="card"><img src="assets/usd.svg"><span>USD</span></div>
+      </a>
+      <a href="zakat-calculator/zc-gbp.html">
+        <div class="card"><img src="assets/gbp.svg"><span>GBP</span></div>
+      </a>
+      <a href="zakat-calculator/zc-ngn.html">
+        <div class="card"><img src="assets/ngn.svg"><span>NGN</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay"></div>
+
+  <script>
+    // Get elements
+    const calculateBtn = document.querySelector('.cta .btn');
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
+    const closePopup = document.getElementById('closePopup');
+
+    // Show popup
+    calculateBtn.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default link behavior
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+    });
+
+    // Hide popup
+    closePopup.addEventListener('click', () => {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', () => {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+
+  </script>
 
   
   
