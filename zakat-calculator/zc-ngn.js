@@ -25,7 +25,7 @@ let updateNisabDisplay = async () => {
   const nisabGBP = 430.70; // Nisab value in GBP
   const rateNGN = await fetchExchangeRate();
   const nisabNGN = (nisabGBP * rateNGN).toFixed(2); // Convert to NGN
-  document.querySelector("p").innerHTML = `Today's Nisab is: ₦${nisabNGN} / £${nisabGBP}`;
+  document.querySelector("p").innerHTML = `Today's Nisab is: ₦${nisabNGN}`;
 };
 
 let calculate = () => {

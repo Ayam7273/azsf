@@ -11,16 +11,9 @@
     <div class="container">
         <img src="assets/icons/error.svg" alt="">
         <h1 id="headline">
-            <b>WE'LL BE BACK SOON</b>
+            <b>COMING SOON</b>
         </h1>
-        <div id="countdown">
-            <ul>
-                <li><span id="days"></span>days</li>
-                <li><span id="hours"></span>Hours</li>
-                <li><span id="minutes"></span>Minutes</li>
-                <li><span id="seconds"></span>Seconds</li>
-            </ul>
-        </div>
+        
     </div>
 
     <style>
@@ -83,33 +76,5 @@
         }
     </style>
     
-   <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var countDownDate = new Date("Oct 30, 2024 23:00:00").getTime();
-
-            var x = setInterval(function() {
-
-                var now = new Date().getTime();
-                
-                var distance = countDownDate - now;
-                
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
-                document.getElementById("days").innerHTML = days;
-                document.getElementById("hours").innerHTML = hours;
-                document.getElementById("minutes").innerHTML = minutes;
-                document.getElementById("seconds").innerHTML = seconds;
-                
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").style.display = "none";
-                    document.getElementById("headline").style.display = "none";
-                }
-            }, 1000);
-        });
-   </script>
 </body>
 </html>
