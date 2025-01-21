@@ -53,9 +53,9 @@ let calculate = () => {
   let amt_eligible = amt_assets_net > amt_nisab ? Math.ceil(amt_assets_net) : 0;
   let amt_zakat = amt_eligible > 0 ? Math.ceil(amt_eligible * 0.025) : 0;
 
-  let formatter = new Intl.NumberFormat("en-UK", {
+  let formatter = new Intl.NumberFormat("en-US", {
       style: "currency",
-      currency: "GBP",
+      currency: "USD",
   });
 
   // Update Eligible Amount and Zakat Amount Fields
