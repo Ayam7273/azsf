@@ -1129,6 +1129,7 @@ body.show-chatbot .chatbot-popup {
     opacity: 1;
     pointer-events: auto;
     transform: scale(1);
+    z-index: 999;
 }
 
 .chat-header {

@@ -1,0 +1,70 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.organogram{
+    padding: 20px;
+    border-radius: 25px;
+    background-color: #EBEEF1;
+}
+
+.organogram img{
+    max-width: 500px;
+}
+
+.download-btn{
+  outline: none;
+  border: none;
+  color: #fff;
+  display: flex;
+  cursor: pointer;
+  padding: 16px 25px;
+  border-radius: 50px;
+  align-items: center;
+  white-space: nowrap;
+  background: #07A550;
+  transition: all 0.2s ease; 
+  justify-content: center;
+}
+.download-btn:hover{
+  background: #000;
+}
+.download-btn.timer{
+  color: #000;
+  background: none;
+  transition: none;
+  font-size: 1.6rem;
+  pointer-events: none;
+}
+.download-btn.timer b{
+  color: #07A550;
+  padding: 0 8px;
+}
+.download-btn i{
+  font-size: 1rem;
+}
+.download-btn .text{
+  font-size: 1rem;
+  padding-left: 10px;
+}
+
+/* General styling for tablet and mobile responsiveness */
+/* Mobile view */
+@media screen and (max-width: 480px) {
+    .organogram img {
+      max-width: 350px; 
+    }
+}
+  
