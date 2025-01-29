@@ -37,34 +37,25 @@ body{
   background: #07A550;
   transition: all 0.2s ease; 
   justify-content: center;
+  align-items: center;
 }
 .download-btn:hover{
   background: #000;
 }
-.download-btn.timer{
-  color: #000;
-  background: none;
-  transition: none;
-  font-size: 1.6rem;
-  pointer-events: none;
-}
-.download-btn.timer b{
-  color: #07A550;
-  padding: 0 8px;
-}
+
 .download-btn i{
   font-size: 1rem;
 }
 .download-btn .text{
   font-size: 1rem;
-  padding-left: 10px;
+  padding-left: 5px;
 }
 
 /* General styling for tablet and mobile responsiveness */
 /* Mobile view */
 @media screen and (max-width: 480px) {
     .organogram img {
-      max-width: 350px; 
+      max-width: 300px; 
     }
 }
   

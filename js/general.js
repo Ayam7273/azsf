@@ -120,7 +120,7 @@ const chatHistory = [
                   22. How can I volunteer with Al-Ihsan?
                   Answer: We welcome volunteers to support our initiatives. You can check our website or contact us directly to learn about available opportunities.
                   23. How do I contact Al-Ihsan for more information?
-                  Answer:  You can reach us through our email: azsf@gmail.com`
+                  Answer:  You can reach us through our email: info@al-ihsanzakat.com`
         }],
     },
 ];

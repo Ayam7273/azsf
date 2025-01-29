@@ -38,12 +38,10 @@ const chatHistory = [
 
                 Q4: How can I contact the foundation? 
                 A: You can contact us via: 
+                
+                Email: info@al-ihsanzakat.com
 
-                Phone: [Insert Phone Number] 
-
-                Email: [Insert Email Address] 
-
-                Website: [Insert Website URL] 
+                Phone: [Insert Phone Number]
 
                 Donations 
 
@@ -150,7 +148,7 @@ const chatHistory = [
                 Q21: How can I provide feedback or file a complaint? 
                 A: We value your feedback. You can reach out to us via: 
 
-                Email: [Insert Email Address] 
+                Email: info@al-ihsanzakat.com 
 
                 Phone: [Insert Phone Number] 
 

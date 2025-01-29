@@ -68,38 +68,12 @@
     </div>
 
     <!-- Download organogram -->
-    <button class="download-btn" data-timer="10">
-        <i class="fa-solid fa-eye"></i>
-        <span class="text">View Now</span>
-    </button>
-
-    <script>
-        const downloadBtn = document.querySelector(".download-btn");
-        const fileLink = "https://drive.google.com/uc?export=download&id=1aYiaLn3YOjL-_o5QBCy7tU1epqA6gZoi";
-        const initTimer = () => {
-            if(downloadBtn.classList.contains("disable-timer")) {
-                return location.href = fileLink;
-            }
-            let timer = downloadBtn.dataset.timer;
-            downloadBtn.classList.add("timer");
-            downloadBtn.innerHTML = `Your download will begin in <b>${timer}</b> seconds`;
-            const initCounter = setInterval(() => {
-                if(timer > 0) {
-                    timer--;
-                    return downloadBtn.innerHTML = `Your download will begin in <b>${timer}</b> seconds`;
-                }
-                clearInterval(initCounter);
-                location.href = fileLink;
-                downloadBtn.innerText = "Your file is downloading...";
-                setTimeout(() => {
-                    downloadBtn.classList.replace("timer", "disable-timer");
-                    downloadBtn.innerHTML = `<span class="icon material-symbols-rounded">vertical_align_bottom</span>
-                                            <span class="text">Download Again</span>`;
-                }, 3000);
-            }, 1000);
-        }
-        downloadBtn.addEventListener("click", initTimer);
-    </script>
+    <a class="download-btn" href="https://docs.google.com/presentation/d/1YUzMfy-GEdcVariCbyVVsD8koE6igORs/edit#slide=id.p1">
+        <div style="justify-content: center; align-items: center;">
+            <i class="fa-solid fa-eye"></i>
+            <span class="text">View Now</span>
+        </div>
+    </a>
 
     <script src="js/general.js"></script>
 </body>
