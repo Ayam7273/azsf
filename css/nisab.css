@@ -71,8 +71,16 @@ body {
 .container h1 {
     font-size: 36px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+h4 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: "DM Sans", serif;
+    color: #626060;
 }
 
 /* Content Layout */
@@ -92,7 +100,7 @@ body {
 .nisab-card {
     display: flex;
     background-color: #EBEEF1;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
     padding: 20px;
     gap: 20px;
@@ -115,7 +123,8 @@ body {
 .nisab-details h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: "DM Sans", serif;
+    font-weight: 300;
 }
 
 .nisab-details p {
@@ -124,21 +133,30 @@ body {
     font-family: "DM Sans", serif;
 }
 
-.donate-button {
-    background-color: #07A550;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 100px;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s;
+#gold-value{
+    color: #07A550;
+    font-size: 30px;
+    font-family: "DM Sans", serif;
+    font-weight: 700;
 }
 
-.donate-button:hover {
-    background-color: #131313;
+#gold-price{
+    font-size: 16px;
+    font-weight: 500;
 }
+
+#silver-value{
+    color: #07A550;
+    font-size: 30px;
+    font-family: "DM Sans", serif;
+    font-weight: 700;
+}
+
+#silver-price{
+    font-size: 16px;
+    font-weight: 500;
+}
+
 
 /* Nisab Accordion */
 .nisab-accordion {
@@ -170,6 +188,7 @@ body {
     overflow: hidden;
     transition: max-height 0.3s ease;
     max-height: 0;
+    color: #626060;
 }
 
 .nisab-answer.active {

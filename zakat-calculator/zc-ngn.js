@@ -7,26 +7,52 @@ let getvalue = (id) => {
   }
 };
 
-let fetchExchangeRate = async () => {
+// Function to fetch exchange rate
+async function fetchExchangeRate() {
   try {
-      const response = await fetch(
-          "https://api.exchangerate-api.com/v4/latest/GBP"
-      ); // Fetch the latest exchange rates for GBP
-      const data = await response.json();
-      const rateNGN = data.rates.NGN; // Get the rate for GBP to NGN
-      return rateNGN;
+    const response = await fetch("https://api.exchangerate-api.com/v4/latest/USD");
+    const data = await response.json();
+    return data.rates.NGN || 1501; // Return EUR rate or fallback
   } catch (error) {
-      console.error("Error fetching exchange rate:", error);
-      return 1000; // Fallback rate if API fails (assume 1 GBP = 1000 NGN as a placeholder)
+    console.error("Error fetching exchange rate:", error);
+    return 1501; // Fallback rate
   }
-};
+}
 
-let updateNisabDisplay = async () => {
-  const nisabGBP = 430.70; // Nisab value in GBP
-  const rateNGN = await fetchExchangeRate();
-  const nisabNGN = (nisabGBP * rateNGN).toFixed(2); // Convert to NGN
-  document.querySelector("p").innerHTML = `Today's Nisab is: ₦${nisabNGN}`;
-};
+// Function to fetch metal prices
+async function fetchPrices() {
+  try {
+    const response = await fetch("https://metals-api.com/api/latest?access_key=y2t7bxv2g5nmggsfvcj2dgo8731mvmce5k60nb9n2602e5m30ax1f7cdyz81&base=USD&symbols=XAU,XAG");
+    const data = await response.json();
+
+    if (!data.rates || !data.rates.XAU || !data.rates.XAG) {
+      throw new Error("Invalid API response");
+    }
+
+    // Convert inverted values
+    const silverPricePerOunceUSD = 1 / data.rates.XAG;
+
+    // Fetch NGN exchange rate
+    const usdToNGN = await fetchExchangeRate();
+    const silverPricePerOunceNGN = silverPricePerOunceUSD * usdToNGN;
+
+    // Convert price per ounce to price per gram
+    const silverPricePerGramNGN = (silverPricePerOunceNGN / 34.5).toFixed(2);
+
+    // Nisab values
+    silverNisabValue = (silverPricePerGramNGN * 612.36).toFixed(2); // Store globally
+
+    // Update HTML  
+    document.getElementById("todaynisabvalue").innerText = `Today's Nisab is:  ₦${silverNisabValue}`;
+
+  } catch (error) {
+    console.error("Error fetching prices:", error);
+  }
+}
+
+// Auto-update every hour
+fetchPrices();
+setInterval(fetchPrices, 3600000);
 
 let calculate = () => {
   let amt_nisab = 430.70; // Nisab threshold in GBP

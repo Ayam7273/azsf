@@ -7,29 +7,40 @@ let getvalue = (id) => {
   }
 };
 
-let fetchExchangeRate = async () => {
-  try {
-      const response = await fetch(
-          "https://api.exchangerate-api.com/v4/latest/GBP"
-      ); // Fetch the latest exchange rates for GBP
-      const data = await response.json();
-      const rateUSD = data.rates.USD; // Get the rate for GBP to USD
-      return rateUSD;
-  } catch (error) {
-      console.error("Error fetching exchange rate:", error);
-      return 1.3; // Fallback rate if API fails
-  }
-};
 
-let updateNisabDisplay = async () => {
-  const nisabGBP = 430.70; // Nisab value in GBP
-  const rateUSD = await fetchExchangeRate();
-  const nisabUSD = (nisabGBP * rateUSD).toFixed(2); // Convert to USD
-  document.querySelector("p").innerHTML = `Today's Nisab is: $${nisabUSD}`;
-};
+// Function to fetch metal prices
+async function fetchPrices() {
+  try {
+    const response = await fetch("https://metals-api.com/api/latest?access_key=y2t7bxv2g5nmggsfvcj2dgo8731mvmce5k60nb9n2602e5m30ax1f7cdyz81&base=USD&symbols=XAU,XAG");
+    const data = await response.json();
+
+    if (!data.rates || !data.rates.XAU || !data.rates.XAG) {
+      throw new Error("Invalid API response");
+    }
+
+    // Convert inverted values
+    const silverPricePerOunceUSD = data.rates.XAG;
+
+    // Convert price per ounce to price per gram
+    const silverPricePerGramUSD = (silverPricePerOunceUSD / 34.5).toFixed(2);
+
+    // Nisab values
+    silverNisabValue = (silverPricePerGramUSD * 612.36).toFixed(2); // Store globally
+
+    // Update HTML  
+    document.getElementById("todaynisabvalue").innerText = `Today's Nisab is: $${silverNisabValue}`;
+
+  } catch (error) {
+    console.error("Error fetching prices:", error);
+  }
+}
+
+// Auto-update every hour
+fetchPrices();
+setInterval(fetchPrices, 3600000);
 
 let calculate = () => {
-  let amt_nisab = 430.70; // Nisab threshold in GBP
+  let amt_nisab = silverNisabValue;
   let amt_home = getvalue("amount_home");
   let amt_bank = getvalue("amount_bank");
   let amt_shares = getvalue("amount_shares");

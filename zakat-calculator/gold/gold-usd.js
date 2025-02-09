@@ -5,58 +5,44 @@ let getvalue = (id) => {
     } else {
         return parseFloat(value);
     }
-};
+  };
+  
+  // Function to fetch metal prices
+    async function fetchPrices() {
+        try {
+            const response = await fetch("https://metals-api.com/api/latest?access_key=y2t7bxv2g5nmggsfvcj2dgo8731mvmce5k60nb9n2602e5m30ax1f7cdyz81&base=USD&symbols=XAU,XAG");
+            const data = await response.json();
 
-// Function to fetch exchange rate
-async function fetchExchangeRate() {
-    try {
-      const response = await fetch("https://api.exchangerate-api.com/v4/latest/USD");
-      const data = await response.json();
-      return data.rates.EUR || 0.9; // Return EUR rate or fallback
-    } catch (error) {
-      console.error("Error fetching exchange rate:", error);
-      return 0.9; // Fallback rate
-    }
-}
+            if (!data.rates || !data.rates.XAU || !data.rates.XAG) {
+                throw new Error("Invalid API response");
+            }
 
-// Function to fetch metal prices
-async function fetchPrices() {
-    try {
-      const response = await fetch("https://metals-api.com/api/latest?access_key=y2t7bxv2g5nmggsfvcj2dgo8731mvmce5k60nb9n2602e5m30ax1f7cdyz81&base=USD&symbols=XAU,XAG");
-      const data = await response.json();
-  
-      if (!data.rates || !data.rates.XAU || !data.rates.XAG) {
-        throw new Error("Invalid API response");
-      }
-  
-      // Convert inverted values
-      const silverPricePerOunceUSD = 1 / data.rates.XAG;
-  
-      // Fetch EUR exchange rate
-      const usdToEUR = await fetchExchangeRate();
-      const silverPricePerOunceEUR = silverPricePerOunceUSD * usdToEUR;
-  
-      // Convert price per ounce to price per gram
-      const silverPricePerGramEUR = (silverPricePerOunceEUR / 34.5).toFixed(2);
-  
-      // Nisab values
-      silverNisabValue = (silverPricePerGramEUR * 612.36).toFixed(2); // Store globally
-  
-      // Update HTML  
-      document.getElementById("todaynisabvalue").innerText = `Today's Nisab is: €${silverNisabValue}`;
-  
-    } catch (error) {
-      console.error("Error fetching prices:", error);
+            // Convert inverted values
+            const goldPricePerOunceUSD = 1 / data.rates.XAU;
+
+            // Convert price per ounce to price per gram
+            const goldPricePerGramUSD = (goldPricePerOunceUSD / 34.5).toFixed(2);
+
+            // Nisab values
+            goldNisabValue = (goldPricePerGramUSD * 612.36).toFixed(2); // Store globally
+
+            // Update HTML  
+            document.getElementById("todaynisabvalue").innerText = `Today's Nisab is: $${goldNisabValue}`;
+
+        } catch (error) {
+            console.error("Error fetching prices:", error);
+        }
     }
-}
-  
-// Auto-update every hour
-fetchPrices();
-setInterval(fetchPrices, 3600000);
   
   
-let calculate = () => {
-    let amt_nisab = silverNisabValue;
+   
+  
+  // Auto-update every hour
+  fetchPrices();
+  setInterval(fetchPrices, 3600000);
+  
+  let calculate = () => {
+    let amt_nisab = goldNisabValue;
     let amt_home = getvalue("amount_home");
     let amt_bank = getvalue("amount_bank");
     let amt_shares = getvalue("amount_shares");
@@ -80,9 +66,9 @@ let calculate = () => {
     let amt_eligible = amt_assets_net > amt_nisab ? Math.ceil(amt_assets_net) : 0;
     let amt_zakat = amt_eligible > 0 ? Math.ceil(amt_eligible * 0.025) : 0;
   
-    let formatter = new Intl.NumberFormat("en-EU", {
+    let formatter = new Intl.NumberFormat("en-US", {
         style: "currency",
-        currency: "EUR",
+        currency: "USD",
     });
   
     // Update Eligible Amount and Zakat Amount Fields
@@ -91,13 +77,12 @@ let calculate = () => {
     document.getElementById("amount_zakat").value =
         amt_eligible > 0 ? formatter.format(amt_zakat) : "Ineligible";
   
-  
-    // Update CTA Button
+    // Update CTA Button Behavior
     const donateButton = document.getElementById("donate_button");
     if (amt_eligible > 0) {
         donateButton.innerText = "Pay Now";
         donateButton.dataset.amount = amt_zakat;
-        donateButton.href = "/https://donate.stripe.com/7sI03XbLPaP2bew6oo";
+        donateButton.href = "/https://donate.stripe.com/7sI03XbLPaP2bew6oo"; // Direct to donation page
         donateButton.classList.add("active-cta");
     } else {
         donateButton.innerText = "Calculate";
