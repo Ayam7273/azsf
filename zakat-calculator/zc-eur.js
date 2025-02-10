@@ -97,7 +97,7 @@ let calculate = () => {
     if (amt_eligible > 0) {
         donateButton.innerText = "Pay Now";
         donateButton.dataset.amount = amt_zakat;
-        donateButton.href = "/https://donate.stripe.com/7sI03XbLPaP2bew6oo";
+        donateButton.href = "https://donate.stripe.com/7sI03XbLPaP2bew6oo";
         donateButton.classList.add("active-cta");
     } else {
         donateButton.innerText = "Calculate";

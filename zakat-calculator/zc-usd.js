@@ -19,7 +19,7 @@ async function fetchPrices() {
     }
 
     // Convert inverted values
-    const silverPricePerOunceUSD = data.rates.XAG;
+    const silverPricePerOunceUSD = 1 / data.rates.XAG;
 
     // Convert price per ounce to price per gram
     const silverPricePerGramUSD = (silverPricePerOunceUSD / 34.5).toFixed(2);
@@ -80,7 +80,7 @@ let calculate = () => {
   if (amt_eligible > 0) {
       donateButton.innerText = "Pay Now";
       donateButton.dataset.amount = amt_zakat;
-      donateButton.href = "/https://donate.stripe.com/7sI03XbLPaP2bew6oo"; // Direct to donation page
+      donateButton.href = "https://donate.stripe.com/7sI03XbLPaP2bew6oo"; // Direct to donation page
       donateButton.classList.add("active-cta");
   } else {
       donateButton.innerText = "Calculate";
