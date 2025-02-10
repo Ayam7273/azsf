@@ -6,6 +6,18 @@ let getvalue = (id) => {
         return parseFloat(value);
     }
   };
+
+    // Function to fetch exchange rate
+    async function fetchExchangeRate() {
+        try {
+        const response = await fetch("https://api.exchangerate-api.com/v4/latest/USD");
+        const data = await response.json();
+        return data.rates.NGN || 1501; // Return NGN rate or fallback
+        } catch (error) {
+        console.error("Error fetching exchange rate:", error);
+        return 1501; // Fallback rate
+        }
+    }
   
   // Function to fetch metal prices
     async function fetchPrices() {
@@ -20,14 +32,18 @@ let getvalue = (id) => {
             // Convert inverted values
             const goldPricePerOunceUSD = 1 / data.rates.XAU;
 
+            // Fetch NGN exchange rate
+            const usdToNGN = await fetchExchangeRate();
+            const goldPricePerOunceNGN = goldPricePerOunceUSD * usdToNGN;
+
             // Convert price per ounce to price per gram
-            const goldPricePerGramUSD = (goldPricePerOunceUSD / 34.5).toFixed(2);
+            const goldPricePerGramNGN = (goldPricePerOunceNGN / 34.5).toFixed(2);
 
             // Nisab values
-            goldNisabValue = (goldPricePerGramUSD * 87.48).toFixed(2);
+            goldNisabValue = (goldPricePerGramNGN * 87.48).toFixed(2);
 
             // Update HTML  
-            document.getElementById("todaynisabvalue").innerText = `Today's Nisab is: $${goldNisabValue}`;
+            document.getElementById("todaynisabvalue").innerText = `Today's Nisab is: ₦${goldNisabValue}`;
 
         } catch (error) {
             console.error("Error fetching prices:", error);
@@ -66,9 +82,9 @@ let getvalue = (id) => {
     let amt_eligible = amt_assets_net > amt_nisab ? Math.ceil(amt_assets_net) : 0;
     let amt_zakat = amt_eligible > 0 ? Math.ceil(amt_eligible * 0.025) : 0;
   
-    let formatter = new Intl.NumberFormat("en-US", {
+    let formatter = new Intl.NumberFormat("en-NG", {
         style: "currency",
-        currency: "USD",
+        currency: "NGN",
     });
   
     // Update Eligible Amount and Zakat Amount Fields
