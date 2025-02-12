@@ -81,7 +81,7 @@
           Whether it's cash, savings, investments, or other valuables, our tool ensures every eligible item is accounted for. No more confusion or stress—just a quick, clear answer to fulfill your spiritual duty. Start today and make your Zakat calculation effortless!
         </p>
         <div class="cal-cta">
-          <a class="calculate">Calculate Now</a>
+          <a class="calculate" href="onboarding.html">Calculate Now</a>
         </div>
       </div>
       <img src="assets/cal-hero-img.png" class="cal-img" />
@@ -218,58 +218,6 @@
     </div>
 
   </section>
-
-  <!-- Popup -->
-  <div id="popup" class="popup">
-    <button id="closePopup" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
-    <div class="popup-header">
-      <h2>What currency do you want to calculate your Zakat?</h2>
-    </div>
-    <div class="popup-content">
-      <a href="zakat-calculator/zc-usd.html">
-        <div class="card"><img src="assets/usd.svg"><span>USD</span></div>
-      </a>
-      <a href="zakat-calculator/zc-gbp.html">
-        <div class="card"><img src="assets/gbp.svg"><span>GBP</span></div>
-      </a>
-      <a href="zakat-calculator/zc-ngn.html">
-        <div class="card"><img src="assets/ngn.svg"><span>NGN</span></div>
-      </a>
-      <a href="zakat-calculator/zc-eur.html">
-        <div class="card"><img src="assets/eur.svg"><span>EUR</span></div>
-      </a>
-    </div>
-  </div>
-
-  <!-- Overlay -->
-  <div id="overlay" class="overlay"></div>
-
-  <script>
-    // Get elements
-    const calculateBtn = document.querySelector('.calculate');
-    const popup = document.getElementById('popup');
-    const overlay = document.getElementById('overlay');
-    const closePopup = document.getElementById('closePopup');
-
-    // Show popup
-    calculateBtn.addEventListener('click', (event) => {
-      event.preventDefault(); // Prevent default link behavior
-      popup.style.display = 'block';
-      overlay.style.display = 'block';
-    });
-
-    // Hide popup
-    closePopup.addEventListener('click', () => {
-      popup.style.display = 'none';
-      overlay.style.display = 'none';
-    });
-
-    overlay.addEventListener('click', () => {
-      popup.style.display = 'none';
-      overlay.style.display = 'none';
-    });
-
-  </script>
 
   <script src="js/general.js"></script>
 </body>
